@@ -8,53 +8,52 @@ shell script
 pip3 install MAS
 ---
 
-## Descripción
+## Descripci贸n
 
-Aplicación en **Python** que recibe un conjunto de archivos MP3, individuales u organizados en carpetas,
-y genera uno o más archivos de salida de 1 hora de duración cada uno.
-Ideal para dividir grabaciones largas en bloques manejables y continuos, y mas livianos para dispositivos móviles.
+Aplicaci贸n en **Python** que recibe un conjunto de archivos MP3, individuales u organizados en carpetas,
+y genera uno o m谩s archivos de salida de 1 hora de duraci贸n cada uno.
+Ideal para dividir grabaciones largas en bloques manejables y continuos, y mas livianos para dispositivos m贸viles.
 
 El proceso se realiza en dos partas:
 1 fase: se crea un archivo con la mezcla de todos los mp3 encontrados en la entrada, y los recodifica, generando
 etiquetas de tiempo
 2 fase: generacion de los archivos de salida de 1 hora cada uno. Toma el archivo recodificado, y aprovecha las
 etiquetas de piempo para identificar los segmentos de 1 hora. Cada archivo se va generando con un consecutivo
-de 3 dígitos.
+de 3 d铆gitos.
 
 ---
 
-## Características
-- Procesa uno o más archivos MP3 de larga duración, desde una carpeta o lista de archivos.
+## Caracter铆sticas
+- Procesa uno o m谩s archivos MP3 de larga duraci贸n, desde una carpeta o lista de archivos.
 - Genera archivos de salida de 1 hora.
-- Si el conjunto dura menos de una hora, se exporta un único archivo concatenado.
-- Manejo de archivos con codificación corrupta: se recodifican los archivos fuente, de forma que se puedan 
+- Si el conjunto dura menos de una hora, se exporta un 煤nico archivo concatenado.
+- Manejo de archivos con codificaci贸n corrupta: se recodifican los archivos fuente, de forma que se puedan 
   particionar sin problema.
 - Manejo optimizado de memoria: procesa archivo por archivo sin cargar todo en RAM.
-- Compatible con cualquier duración de entrada (horas o incluso decenas de horas).
+- Compatible con cualquier duraci贸n de entrada (horas o incluso decenas de horas).
 
 ---
 
 ## Estructura del proyecto
 MAS/
  MAS.py                # Script principal
- utils/                # Directorio con los los procesos que hacel la lógica del proceso
+ utils/                # Directorio con los los procesos que hacel la l贸gica del proceso
    manejo_archivos.py  # Prepara los archivos de entrada, y administra el directorio de salida
    manejo_audio.py     # Realiza el particionamiento de los archivos
  requirements.txt      # Dependencias
- README.md             # Documentación
- salida/               # Carpeta de salida (se genera automáticamente)
+ README.md             # Documentaci贸n
 
 
 ---
 
-## Instalación
+## Instalaci贸n
 
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/jesuvell/Proyecto_audio.git
    cd MAS
 
-# Instalación de dependencias
+# Instalaci贸n de dependencias
 pip install -r requirements.txt
 
 # Instala ffmpeg (requerido por pydub):
