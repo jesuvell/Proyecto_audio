@@ -1,0 +1,36 @@
+grupos ssanguineos
+internet cuando fue creado
+cleopatra si era egipcia de nacimiento
+Si el rayo es mas caliente que la superficie del sol
+Triangulo de las bermudas
+
+
+python MAS.py "D:\javl\Musica\Salida" "D:\javl\Musica\David Bowie - Ziggy Stardust\Ziggy Stardust"
+
+python MAS.py "D:\javl\Musica\Salida" "D:/javl/Musica/David Bowie - Ziggy Stardust/Ziggy Stardust/02 Soul Love.mp3" "D:/javl/Musica/David Bowie - Ziggy Stardust/Ziggy Stardust/03 Moonage Daydream.mp3"
+
+python MAS.py "D:\javl\Musica\Salida" "D:\javl\Musica\Bee Gees" "D:\javl\Musica\David Bowie - Ziggy Stardust\Ziggy Stardust\01 Five Years.mp3"
+
+python MAS.py "D:\javl\Musica\Salida" "D:\javl\Musica\David Bowie - Ziggy Stardust\Ziggy Stardust\01 Five Years.mp3"
+
+python MAS.py "D:\javl\Musica\Salida" "D:\javl\Musica\Lark Trilogia del arbol kaori\1 hacia mares de libertad"
+
+
+bash# 1. Inicializa el repositorio local
+git init
+
+# 2. Añade todos los archivos (el .gitignore excluirá lo innecesario)
+git add .
+
+# 3. Guarda los cambios localmente
+git commit -m "Primer commit: Estructura del proyecto y requirements"
+
+# 4. Cambia el nombre de la rama principal a 'main'
+git branch -M main
+
+# 5. Vincula tu repositorio local con el de GitHub
+# (Reemplaza la URL con la de tu repositorio vacío en GitHub)
+git remote add origin https://github.com
+
+# 6. Sube los archivos
+git push -u origin main
